@@ -8,7 +8,7 @@
 
 rightscale_marker :begin
 
-log "  Setting provider specific settings for APT FTP Archive"
+#log "  Setting provider specific settings for APT FTP Archive"
 
 case node[:platform]
 when "ubuntu","debian"
@@ -72,8 +72,6 @@ end
 service "apache2" do
   action :restart
 end
-
-
 
 case node[:platform]
 when "ubuntu","debian"
