@@ -75,7 +75,7 @@ end
 
 execute "apt-get update" do
   action :nothing
-end.run_action(:install)
+end.run_action(:run)
 
 case node[:platform]
 when "ubuntu","debian"
