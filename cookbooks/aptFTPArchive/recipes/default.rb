@@ -73,6 +73,10 @@ service "apache2" do
   action :restart
 end
 
+execute "apt-get update" do
+  action :nothing
+end.run_action(:install)
+
 case node[:platform]
 when "ubuntu","debian"
   package "inmobi-aptftp-build-repo" do
