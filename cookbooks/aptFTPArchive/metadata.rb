@@ -8,6 +8,7 @@ version          "0.0.1"
 depends "rightscale"
 
 recipe  "aptFTPArchive::default", "Installs APT FTP Archive server."
+recipe  "aptFTPArchive::apt-client", "Installs APT FTP Archive client."
 
 attribute "aptFTPArchive/suite",
   :display_name => "APT FTP Archive Suites",
