@@ -8,13 +8,15 @@
 
 rightscale_marker :begin
 
-#log "  Setting provider specific settings for APT FTP Archive"
+log " Staring apt-get update"
 
 execute "apt-get-update" do
   command "apt-get update"
   ignore_failure true
   action :nothing
 end
+
+log "Done with apt-get update"
   
 
 case node[:platform]
