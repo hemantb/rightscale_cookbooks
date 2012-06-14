@@ -4,6 +4,7 @@ node[:nginx_inmobi][:nginxConfPackage] .each do |p|
   log "Installing #{p}"
   if ( "#{p}" =~ (.*?)=(.*)
   if (/(\w+)==(.*)/.match("#{p}"))
+    log " Installing Package" + $1 "with version" + $2
     package $1 do
       version $2
       action :install
