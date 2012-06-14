@@ -15,6 +15,7 @@ when "ubuntu", "debian"
     "mkhoj-base",
     "ngin-johndoe"
   ]
+end
 
 nginx_inmobi "install packages" do
   persist true
