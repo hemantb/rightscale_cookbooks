@@ -21,6 +21,7 @@ nginx_inmobi "install packages" do
   persist true
   packages node[:nginx_inmobi][:packages] do
   action :install
+  end
 end
 
 template "#{node[:nginx_inmobi][:dir]}/nginx.conf" do
