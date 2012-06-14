@@ -78,19 +78,14 @@ template "/etc/apache2/conf.d/apt-apache.conf" do
   mode 0644
 end
 
+coobook_file "/var/www/app-apt.key" do
+  source "app-apt.key"
+  mode "0644"
+end
+
 service "apache2" do
   action :restart
 end
-
-log "Starting update again"
-
-#execute "apt-get update" do
-#  command "apt-get update"
-#  ignore_failure true
-#  action :nothing
-#end.run_action(:run)
-
-log "done AGAIN"
 
 case node[:platform]
 when "ubuntu","debian"

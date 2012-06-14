@@ -57,3 +57,10 @@ attribute "aptFTPArchive/aptRootPath",
   :type => "string",
   :default => "/var/drepo",
   :required => "recommended"
+
+attribute "aptFTPArchive/aptserver",
+  :display_name => "AptServer for clients",
+  :description => "Apt server for clients",
+  :type => "string",
+  :default => "apppkg1.ev1.inmobi.com",
+  :required => "recommended"
