@@ -78,9 +78,11 @@ template "/etc/apache2/conf.d/apt-apache.conf" do
   mode 0644
 end
 
-coobook_file "/var/www/app-apt.key" do
-  source "app-apt.key"
-  mode "0644"
+template "/var/www/app-apt.key" do
+  source "app-apt.key.erb"
+  owner "root"
+  group "root"
+  mode 0644
 end
 
 service "apache2" do
