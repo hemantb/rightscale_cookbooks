@@ -1,4 +1,4 @@
-rs_utils_marker :begin
+rightscale_marker :begin
 
 node[:nginx_inmobi][:nginxConfPackage] .each do |p|
   log "Installing #{p}"
@@ -24,4 +24,4 @@ when "true"
   end
 end
 
-rs_utils_marker :end
+rightscale_marker :end

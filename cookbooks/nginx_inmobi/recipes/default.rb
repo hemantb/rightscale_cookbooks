@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 
-rs_utils_marker :begin
+rightscale_marker :begin
 
 
 case node[:platform]
@@ -35,4 +35,4 @@ nginx_inmobi "setup config" do
   action :setup_config
 end
 
-rs_utils_marker :end
+rightscale_marker :end
