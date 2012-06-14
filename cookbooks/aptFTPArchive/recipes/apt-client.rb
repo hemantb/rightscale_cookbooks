@@ -5,6 +5,18 @@ template "/etc/apt/sources.list.d/inmobi-app-apt.list" do
   mode 0644
 end
 
-execute "curl -s http://#{node[:aptFTPArchive][:aptserver]/app-apt.key | apt-key add -" do
+execute "curl -s http://#{node[:aptFTPArchive][:aptserver]}/app-apt.key | apt-key add -" do
   not_if "apt-key export 'InMobi Operations (InMobi)'"
 end
+
+
+log " Staring apt-get update"
+
+execute "apt-get-update" do
+  command "apt-get update"
+  ignore_failure true
+  action :nothing
+end.run_action(:run)
+
+log "Done with apt-get update"
+
