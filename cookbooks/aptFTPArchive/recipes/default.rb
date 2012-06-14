@@ -10,6 +10,13 @@ rightscale_marker :begin
 
 #log "  Setting provider specific settings for APT FTP Archive"
 
+execute "apt-get-update" do
+  command "apt-get update"
+  ignore_failure true
+  action :nothing
+end
+  
+
 case node[:platform]
 when "ubuntu","debian"
   package "dpkg-dev" do
@@ -73,9 +80,9 @@ service "apache2" do
   action :restart
 end
 
-execute "apt-get update" do
-  action :nothing
-end.run_action(:run)
+#execute "apt-get update" do
+#  action :nothing
+#end.run_action(:run)
 
 case node[:platform]
 when "ubuntu","debian"
