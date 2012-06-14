@@ -8,7 +8,7 @@ end
 #execute "curl -s http://#{node[:aptFTPArchive][:aptserver]}/app-apt.key | apt-key add -" do
 execute "curl -s http://appkg1.ev1.inmobi.com/app-apt.key | apt-key add -" do
   not_if "apt-key export 'InMobi Operations (InMobi)'"
-end
+end.run_action(:run)
 
 
 log " Staring apt-get update"
