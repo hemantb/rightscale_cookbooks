@@ -5,11 +5,13 @@ template "/etc/apt/sources.list.d/inmobi-app-apt.list" do
   mode 0644
 end
 
+log "Adding APT key for APPOps"
 #execute "curl -s http://#{node[:aptFTPArchive][:aptserver]}/app-apt.key | apt-key add -" do
 execute "curl -s http://appkg1.ev1.inmobi.com/app-apt.key | apt-key add -" do
   not_if "apt-key export 'app-ops'"
 end.run_action(:run)
 
+log "Done APT key for APPOps"
 
 log " Staring apt-get update"
 
