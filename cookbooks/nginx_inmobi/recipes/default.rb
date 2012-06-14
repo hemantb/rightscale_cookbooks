@@ -17,11 +17,10 @@ when "ubuntu", "debian"
   ]
 end
 
-nginx_inmobi "install packages" do
+nginx_inmobi "install_packages" do
   persist true
-  packages node[:nginx_inmobi][:packages] do
+  packages node[:nginx_inmobi][:packages]
   action :install
-  end
 end
 
 template "#{node[:nginx_inmobi][:dir]}/nginx.conf" do
