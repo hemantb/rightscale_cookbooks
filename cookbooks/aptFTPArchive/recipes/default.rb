@@ -85,6 +85,13 @@ template "/var/www/app-apt.key" do
   mode 0644
 end
 
+template "/var/www/inmobiglobal-apt.key" do
+  source "inmobiglobal-apt.key.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
+
 service "apache2" do
   action :restart
 end

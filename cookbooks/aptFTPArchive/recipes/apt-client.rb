@@ -11,6 +11,10 @@ execute "curl -s http://appkg1.ev1.inmobi.com/app-apt.key | apt-key add -" do
   not_if "apt-key export 'app-ops'"
 end.run_action(:run)
 
+execute "curl -s http://appkg1.ev1.inmobi.com/inmobiglobal-apt.key | apt-key add -" do
+  not_if "apt-key export 'InMobi Operations'"
+end.run_action(:run)
+
 log "Done APT key for APPOps"
 
 log " Staring apt-get update"
