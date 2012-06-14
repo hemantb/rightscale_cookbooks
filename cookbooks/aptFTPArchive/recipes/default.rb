@@ -81,8 +81,12 @@ end
 service "apache2" do
   action :restart
 end
+
 log "Starting update again"
+
 execute "apt-get update" do
+  command "apt-get update"
+  ignore_failure true
   action :nothing
 end.run_action(:run)
 
