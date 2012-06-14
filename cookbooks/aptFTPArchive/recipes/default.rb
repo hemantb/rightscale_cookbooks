@@ -81,10 +81,12 @@ end
 service "apache2" do
   action :restart
 end
+log "Starting update again"
+execute "apt-get update" do
+  action :nothing
+end.run_action(:run)
 
-#execute "apt-get update" do
-#  action :nothing
-#end.run_action(:run)
+log "done AGAIN"
 
 case node[:platform]
 when "ubuntu","debian"
