@@ -25,6 +25,7 @@ end
 
 action :install do
   log " Running apt-get update"
+  packages = new_resource.packages
   execute "update apt cache" do
     command "apt-get update"
     ignore_failure true
