@@ -1,0 +1,226 @@
+{
+  "name": "nginx_inmobi",
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "description": "Installs/Configures Nginx Johndoe and required server includes",
+  "providing": {
+  },
+  "conflicting": {
+  },
+  "attributes": {
+    "nginx_inmobi/worker_processes": {
+      "type": "string",
+      "description": "Number of worker processes",
+      "calculated": false,
+      "default": "2",
+      "display_name": "Nginx Worker Processes",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/keepalive_timeout": {
+      "type": "string",
+      "calculated": false,
+      "default": "65",
+      "display_name": "Nginx Keepalive Timeout",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/gzip_types": {
+      "type": "array",
+      "description": "Supported MIME-types for gzip",
+      "calculated": false,
+      "default": [
+        "text/plain",
+        "text/html",
+        "text/css",
+        "application/x-javascript",
+        "text/xml",
+        "application/xml",
+        "application/xml+rss",
+        "text/javascript"
+      ],
+      "display_name": "Nginx Gzip Types",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/user": {
+      "type": "string",
+      "description": "User nginx will run as",
+      "calculated": false,
+      "default": "nobody",
+      "display_name": "Nginx User",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/nginxConfPackage": {
+      "type": "string",
+      "description": "Nginx Conf With Version",
+      "calculated": false,
+      "default": "nginx-config",
+      "display_name": "Nginx Config Package",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "recipe": [
+        "nginx_inmobi::debinst"
+      ]
+    },
+    "nginx_inmobi/restart": {
+      "type": "string",
+      "description": "Mention if nginx service should be restarted. Use text value as true/false",
+      "calculated": false,
+      "default": "true",
+      "display_name": "Should nginx service be restarted? (eg: false ; default = true)",
+      "recipes": [
+        "app_inmobi::debinst"
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/gzip_comp_level": {
+      "type": "string",
+      "description": "Amount of compression to use",
+      "calculated": false,
+      "default": "2",
+      "display_name": "Nginx Gzip Compression Level",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/dir": {
+      "type": "string",
+      "description": "Location of nginx configuration files",
+      "calculated": false,
+      "default": "/opt/mkhoj/conf/nginx",
+      "display_name": "Nginx Directory",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/worker_connections": {
+      "type": "string",
+      "description": "Number of connections per worker",
+      "calculated": false,
+      "default": "16384",
+      "display_name": "Nginx Worker Connections",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/gzip_proxied": {
+      "type": "string",
+      "description": "Whether gzip is proxied",
+      "calculated": false,
+      "default": "any",
+      "display_name": "Nginx Gzip Proxied",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/gzip": {
+      "type": "string",
+      "description": "Whether gzip is enabled",
+      "calculated": false,
+      "default": "on",
+      "display_name": "Nginx Gzip",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/binary": {
+      "type": "string",
+      "description": "Location of the nginx server binary",
+      "calculated": false,
+      "default": "/opt/mkhoj/sbin/nginx",
+      "display_name": "Nginx Binary",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    },
+    "nginx_inmobi/keepalive": {
+      "type": "string",
+      "description": "Whether to enable keepalive",
+      "calculated": false,
+      "default": "on",
+      "display_name": "Nginx Keepalive",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "required": "optional"
+    }
+  },
+  "replacing": {
+  },
+  "suggestions": {
+  },
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "maintainer": "InMobi",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "maintainer_email": "hemant.burman@inmobi.com",
+  "version": "0.0.1",
+  "recipes": {
+    "nginx_inmobi::default": "Installs Nginx Johndoe",
+    "nginx_inmobi::debinst": "Installs Nginx server includes package"
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "license": "All rights reserved"
+}
