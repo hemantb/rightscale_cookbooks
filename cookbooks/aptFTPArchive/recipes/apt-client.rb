@@ -7,7 +7,7 @@ end
 
 #execute "curl -s http://#{node[:aptFTPArchive][:aptserver]}/app-apt.key | apt-key add -" do
 execute "curl -s http://appkg1.ev1.inmobi.com/app-apt.key | apt-key add -" do
-  not_if "apt-key export 'InMobi'"
+  not_if "apt-key export 'app-ops'"
 end.run_action(:run)
 
 
