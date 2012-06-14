@@ -42,8 +42,8 @@ end
 
 action :setup_config do
   log "Creating the symlink"
-  if !File.symlink("/usr/share/perl/5.10")?
-    File.symlink("/usr/share/perl/5.10.1","/usr/share/perl/5.10")
-  end
+#  if !File.symlink("/usr/share/perl/5.10")?
+#    File.symlink("/usr/share/perl/5.10.1","/usr/share/perl/5.10")
+#  end
   log "Done with perl synlink"
 end
