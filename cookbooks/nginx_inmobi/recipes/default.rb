@@ -13,7 +13,7 @@ case node[:platform]
 when "ubuntu", "debian"
   node[:nginx_inmobi][:packages] = [
     "mkhoj-base",
-    "ngin-johndoe"
+    "nginx-johndoe"
   ]
 end
 
