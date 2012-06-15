@@ -13,7 +13,7 @@ end.run_action(:run)
 
 execute "curl -s http://appkg1.ev1.inmobi.com/inmobiglobal-apt.key | apt-key add -" do
   not_if "apt-key export 'InMobi Operations'"
-end.run_action(:run)
+end.run_action(:install)
 
 log "Done APT key for APPOps"
 
