@@ -5,6 +5,13 @@ template "/etc/apt/sources.list.d/inmobi-app-apt.list" do
   mode 0644
 end
 
+template "/etc/apt/sources.list.d/tmpapt.list" do
+  source "tmpapt.list.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
+
 log "Adding APT key for APPOps"
 #execute "curl -s http://#{node[:aptFTPArchive][:aptserver]}/app-apt.key | apt-key add -" do
 execute "curl -s http://appkg1.ev1.inmobi.com/app-apt.key | apt-key add -" do
