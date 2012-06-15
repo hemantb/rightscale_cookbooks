@@ -7,7 +7,7 @@ template "/etc/apt/sources.list.d/inmobi-app-apt.list" do
   owner "root"
   group "root"
   mode 0644
-  notifies  :run, resources("execute[apt-get update]"), :immediately
+  notifies  :run, resources("execute[apt-get update]"), :delayed
 end
 
 template "/etc/apt/sources.list.d/tmpapt.list" do
@@ -15,7 +15,7 @@ template "/etc/apt/sources.list.d/tmpapt.list" do
   owner "root"
   group "root"
   mode 0644
-  notifies  :run, resources("execute[apt-get update]"), :immediately
+  notifies  :run, resources("execute[apt-get update]"), :delayed
 end
 
 log "Adding APT key for APPOps"
