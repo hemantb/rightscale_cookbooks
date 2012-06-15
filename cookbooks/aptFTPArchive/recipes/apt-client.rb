@@ -10,6 +10,7 @@ template "/etc/apt/sources.list.d/tmpapt.list" do
   owner "root"
   group "root"
   mode 0644
+  notifies  :run, resources("execute[apt-get update]"), :immediately
 end
 
 log "Adding APT key for APPOps"
