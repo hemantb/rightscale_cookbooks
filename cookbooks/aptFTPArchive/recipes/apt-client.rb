@@ -1,3 +1,7 @@
+execute "apt-get update" do
+        action    :nothing
+end
+
 template "/etc/apt/sources.list.d/inmobi-app-apt.list" do
   source "inmobi-app-apt.list.erb"
   owner "root"

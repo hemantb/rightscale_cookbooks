@@ -1,144 +1,144 @@
 {
-  "recipes": {
-    "aptFTPArchive::default": "Installs APT FTP Archive server.",
-    "aptFTPArchive::apt-client": "Installs APT FTP Archive client."
-  },
-  "conflicting": {
-  },
-  "suggestions": {
-  },
-  "dependencies": {
-    "rightscale": ">= 0.0.0"
-  },
-  "platforms": {
-  },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "name": "aptFTPArchive",
   "groupings": {
+  },
+  "description": "Installs/Configures aptFTPArchive",
+  "platforms": {
   },
   "version": "0.0.1",
   "replacing": {
   },
-  "recommendations": {
+  "license": "All rights reserved",
+  "name": "aptFTPArchive",
+  "maintainer_email": "hemant.burman@inmobi.com",
+  "conflicting": {
   },
-  "maintainer": "InMobi",
-  "description": "Installs/Configures aptFTPArchive",
   "providing": {
   },
-  "license": "All rights reserved",
-  "maintainer_email": "hemant.burman@inmobi.com",
+  "suggestions": {
+  },
+  "recommendations": {
+  },
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
   "attributes": {
-    "aptFTPArchive/archivedir": {
-      "recipes": [
-
-      ],
-      "default": "/var/drepo/inmobi",
-      "required": "recommended",
-      "choice": [
-
-      ],
-      "description": "A space-separated list of archivedir",
-      "display_name": "APT FTP Archive archivedir",
-      "type": "string",
-      "calculated": false
-    },
-    "aptFTPArchive/aptRootPath": {
-      "recipes": [
-
-      ],
-      "default": "/var/drepo",
-      "required": "recommended",
-      "choice": [
-
-      ],
-      "description": "Apt Apache Root Path",
-      "display_name": "Apt Apache Root Path",
-      "type": "string",
-      "calculated": false
-    },
-    "aptFTPArchive/codename": {
-      "recipes": [
-
-      ],
-      "default": "prod",
-      "required": "recommended",
-      "choice": [
-
-      ],
-      "description": "Codename",
-      "display_name": "APT FTP Archive codename",
-      "type": "string",
-      "calculated": false
-    },
     "aptFTPArchive/aptserver": {
-      "recipes": [
-
-      ],
-      "default": "appkg1.ev1.inmobi.com",
-      "required": "recommended",
-      "choice": [
-
-      ],
       "description": "Apt server for clients",
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "appkg1.ev1.inmobi.com",
       "display_name": "AptServer for clients",
-      "type": "string",
-      "calculated": false
-    },
-    "aptFTPArchive/buildrepover": {
+      "calculated": false,
       "recipes": [
 
-      ],
-      "default": "0.1-1339500317",
-      "required": "recommended",
-      "choice": [
-
-      ],
-      "description": "Build Repo Version",
-      "display_name": "Build Repo Version",
-      "type": "string",
-      "calculated": false
-    },
-    "aptFTPArchive/components": {
-      "recipes": [
-
-      ],
-      "default": "main ops 3ppours 3pp",
-      "required": "recommended",
-      "choice": [
-
-      ],
-      "description": "A space-separated list oC components",
-      "display_name": "APT FTP Archive Components",
-      "type": "string",
-      "calculated": false
+      ]
     },
     "aptFTPArchive/architectures": {
-      "recipes": [
-
-      ],
-      "default": "amd64 i386 i686",
-      "required": "recommended",
+      "description": "A space-separated list of Architectures",
+      "type": "string",
       "choice": [
 
       ],
-      "description": "A space-separated list of Architectures",
+      "required": "recommended",
+      "default": "amd64 i386 i686",
       "display_name": "APT FTP Archive Architectures",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/buildrepover": {
+      "description": "Build Repo Version",
       "type": "string",
-      "calculated": false
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "0.1-1339500317",
+      "display_name": "Build Repo Version",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/components": {
+      "description": "A space-separated list oC components",
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "main ops 3ppours 3pp",
+      "display_name": "APT FTP Archive Components",
+      "calculated": false,
+      "recipes": [
+
+      ]
     },
     "aptFTPArchive/suite": {
-      "recipes": [
-
-      ],
-      "default": "beta prod",
-      "required": "recommended",
+      "description": "A space-separated list of Suites",
+      "type": "string",
       "choice": [
 
       ],
-      "description": "A space-separated list of Suites",
+      "required": "recommended",
+      "default": "beta prod",
       "display_name": "APT FTP Archive Suites",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/aptRootPath": {
+      "description": "Apt Apache Root Path",
       "type": "string",
-      "calculated": false
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "/var/drepo",
+      "display_name": "Apt Apache Root Path",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/codename": {
+      "description": "Codename",
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "prod",
+      "display_name": "APT FTP Archive codename",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/archivedir": {
+      "description": "A space-separated list of archivedir",
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "default": "/var/drepo/inmobi",
+      "display_name": "APT FTP Archive archivedir",
+      "calculated": false,
+      "recipes": [
+
+      ]
     }
-  }
+  },
+  "recipes": {
+    "aptFTPArchive::default": "Installs APT FTP Archive server.",
+    "aptFTPArchive::apt-client": "Installs APT FTP Archive client."
+  },
+  "maintainer": "InMobi",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n"
 }
