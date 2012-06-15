@@ -1,1 +1,1 @@
-actons :install
+actions :install
