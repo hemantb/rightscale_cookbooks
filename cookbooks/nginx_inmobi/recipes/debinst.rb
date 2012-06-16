@@ -19,9 +19,11 @@ end
 
 case node[:nginx_inmobi][:restart]
 when "true"
-  nginx_config "default" do
+  log "stopping nginx"
+  nginx_inmobi "default" do
     action :restart
   end
+  log "started nginx"
 end
 
 rightscale_marker :end
