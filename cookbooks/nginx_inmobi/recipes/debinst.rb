@@ -2,7 +2,7 @@ rightscale_marker :begin
 
 node[:nginx_inmobi][:nginxConfPackage] .each do |p|
   log "Installing #{p}"
-  if (/(\w+)==(.*)/.match("#{p}"))
+  if (/(.*)=(.*)/.match("#{p}"))
    # log " Installing Package" + $1 "with version" + $2
     package $1 do
       version $2
@@ -19,11 +19,11 @@ end
 
 #case node[:nginx_inmobi][:restart]
 #when "true"
-  log "stopping nginx"
-  nginx_inmobi "default" do
-    action :restart
-  end
-  log "started nginx"
+#  log "stopping nginx"
+#  nginx_inmobi "default" do
+#    action :restart
+#  end
+#  log "started nginx"
 #end
 
 rightscale_marker :end
