@@ -81,4 +81,4 @@ attribute "nginx_inmobi/restart",
   :description => "Mention if nginx service should be restarted. Use text value as true/false",
   :required => "optional",
   :default => "true",
-  :recipes => [ "app_inmobi::debinst" ]
+  :recipe => [ "app_inmobi::debinst" ]
