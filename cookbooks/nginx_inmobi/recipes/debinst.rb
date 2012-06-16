@@ -17,13 +17,13 @@ node[:nginx_inmobi][:nginxConfPackage] .each do |p|
   end
 end
 
-case node[:nginx_inmobi][:restart]
-when "true"
+#case node[:nginx_inmobi][:restart]
+#when "true"
   log "stopping nginx"
   nginx_inmobi "default" do
     action :restart
   end
   log "started nginx"
-end
+#end
 
 rightscale_marker :end
