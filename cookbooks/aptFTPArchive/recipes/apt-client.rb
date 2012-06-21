@@ -1,8 +1,9 @@
 script "apt-get-update" do
-  interpreter "bash"
-  code <<-EOF
-    apt-get update
-    echo "Apt Repo has been updated"
+  interpreter "bash"
+  code <<-EOF
+    apt-get update
+    echo "Apt Repo has been updated"
+    exit 0
   EOF
 end
 
@@ -38,6 +39,4 @@ log "Done APT key for APPOps"
 
 log " Staring apt-get update"
 
-
 log "Done with apt-get update"
-
