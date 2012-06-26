@@ -1,56 +1,56 @@
 {
-  "version": "0.0.1",
-  "dependencies": {
-    "rightscale": ">= 0.0.0"
-  },
-  "platforms": {
-  },
-  "license": "All rights reserved",
-  "maintainer_email": "hemant.burman@inmobi.com",
-  "maintainer": "InMobi Technologies Pvt Ltd",
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "name": "inmobi_app_cron/",
   "recipes": {
     "inmobi_app_cron::default": "Installs crons only if the tage provided is missing"
   },
-  "description": "Install app_package for cron if tag not present inmobi_app_cron",
+  "providing": {
+  },
   "conflicting": {
   },
   "groupings": {
   },
-  "replacing": {
-  },
-  "suggestions": {
-  },
+  "maintainer_email": "hemant.burman@inmobi.com",
   "attributes": {
-    "inmobi_app_cron/debians": {
-      "description": "If version number is omitted packagename with latest version will be installed",
-      "recipes": [
-        "inmobi_app_cron::default"
-      ],
-      "calculated": false,
-      "choice": [
-
-      ],
-      "type": "string",
-      "required": "required",
-      "display_name": "Give space separated list of pkg1=version1,pkg2=version2,... entries"
-    },
     "inmobi_app_cron/app_name": {
       "recipes": [
         "inmobi_app_cron::default"
       ],
-      "calculated": false,
+      "display_name": "Mention the identifier for the application name that this cron package is being used for",
       "choice": [
 
       ],
+      "calculated": false,
       "type": "string",
-      "required": "required",
-      "display_name": "Mention the identifier for the application name that this cron package is being used for"
+      "required": "required"
+    },
+    "inmobi_app_cron/debians": {
+      "recipes": [
+        "inmobi_app_cron::default"
+      ],
+      "display_name": "Give space separated list of pkg1=version1,pkg2=version2,... entries",
+      "choice": [
+
+      ],
+      "description": "If version number is omitted packagename with latest version will be installed",
+      "calculated": false,
+      "type": "string",
+      "required": "required"
     }
   },
-  "providing": {
-  },
   "recommendations": {
+  },
+  "license": "All rights reserved",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "description": "Install app_package for cron if tag not present inmobi_app_cron",
+  "platforms": {
+  },
+  "maintainer": "InMobi Technologies Pvt Ltd",
+  "replacing": {
+  },
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "name": "inmobi_app_cron/",
+  "version": "0.0.1",
+  "suggestions": {
   }
 }
