@@ -17,7 +17,8 @@ cron_servers = get_cron_servers(node[:inmobi_app_cron][:app_name])
 
 if cron_servers.length >= 1
 	cron_servers.each_key do | id |
-		throw "There is already another host #{cron_servers[:"#{id}"][:ip]} running the cron"
+		log "There is already another host #{cron_servers[:"#{id}"][:ip]} running the cron"
+		exit 0
 	end
 end
 
@@ -37,6 +38,7 @@ debians.gsub(/\s+/, "").split(",").uniq.each do |p|
       end
     end
   end
+
 
 include_recipe "rightscale::setup_server_tags"
 

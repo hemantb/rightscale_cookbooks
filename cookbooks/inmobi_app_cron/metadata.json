@@ -1,56 +1,56 @@
 {
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "description": "Install app_package for cron if tag not present inmobi_app_cron",
-  "license": "All rights reserved",
+  "suggestions": {
+  },
+  "recommendations": {
+  },
   "version": "0.0.1",
   "attributes": {
     "inmobi_app_cron/debians": {
       "description": "If version number is omitted packagename with latest version will be installed",
-      "type": "string",
-      "display_name": "Give space separated list of pkg1=version1,pkg2=version2,... entries",
+      "calculated": false,
+      "required": "required",
       "recipes": [
         "inmobi_app_cron::default"
       ],
+      "type": "string",
       "choice": [
 
       ],
-      "calculated": false,
-      "required": "required"
+      "display_name": "Give space separated list of pkg1=version1,pkg2=version2,... entries"
     },
     "inmobi_app_cron/app_name": {
-      "type": "string",
-      "display_name": "Mention the identifier for the application name that this cron package is being used for",
+      "calculated": false,
+      "required": "required",
       "recipes": [
         "inmobi_app_cron::default"
       ],
+      "type": "string",
       "choice": [
 
       ],
-      "calculated": false,
-      "required": "required"
+      "display_name": "Mention the identifier for the application name that this cron package is being used for"
     }
   },
-  "maintainer_email": "hemant.burman@inmobi.com",
-  "maintainer": "InMobi Technologies Pvt Ltd",
   "recipes": {
     "inmobi_app_cron::default": "Installs crons only if the tage provided is missing"
   },
+  "maintainer": "InMobi Technologies Pvt Ltd",
   "replacing": {
   },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "conflicting": {
-  },
-  "recommendations": {
-  },
-  "name": "inmobi_app_cron/",
   "groupings": {
   },
   "providing": {
   },
-  "platforms": {
-  },
-  "suggestions": {
-  },
   "dependencies": {
     "rightscale": ">= 0.0.0"
-  }
+  },
+  "name": "inmobi_app_cron/",
+  "license": "All rights reserved",
+  "maintainer_email": "hemant.burman@inmobi.com"
 }
