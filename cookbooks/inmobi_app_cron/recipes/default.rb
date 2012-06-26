@@ -41,7 +41,6 @@ debians.gsub(/\s+/, "").split(",").uniq.each do |p|
     end
   end
 
-
 include_recipe "rightscale::setup_server_tags"
 
 #Setup Tags
