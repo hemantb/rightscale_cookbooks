@@ -15,7 +15,7 @@ end
 
 cron_servers = get_cron_servers(app_name)
 
-if cron_servers.length > 1 do
+if cron_servers.length > 1
 	cron_servers.each_key do | id |
 		throw "There is already another host #{cron_servers[:"#{id}"][:ip]} running the cron"
 	end
