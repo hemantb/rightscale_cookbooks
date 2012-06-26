@@ -13,7 +13,7 @@ class Chef::Recipe
   include Inmobi::Cron::Helper
 end
 
-cron_servers = get_cron_servers(app_name)
+cron_servers = get_cron_servers(node[:inmobi_app_cron][:app_name])
 
 if cron_servers.length > 1
 	cron_servers.each_key do | id |
